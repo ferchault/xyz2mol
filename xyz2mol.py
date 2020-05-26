@@ -465,8 +465,6 @@ def AC2BO(AC, atoms, charge, allow_charged_fragments=True, use_graph=True):
             elif BO.sum() >= best_BO.sum() and valences_not_too_large(BO, valences) and charge_OK:
                 best_BO = BO.copy()
 
-    if not charge_OK:
-        print("Warning: SMILES charge doesn't match input charge")
     return best_BO, atomic_valence_electrons
 
 
